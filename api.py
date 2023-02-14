@@ -16,7 +16,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Hello from Fastapi"}
+    return {"message": "Hello from Fastapi, we are cooking now!"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host='0.0.0.0', port=8000)

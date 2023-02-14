@@ -15,4 +15,11 @@ For some reason adding a firewall in DO GUI to accept connections on 22 and 80 s
 
 This doesn't make any sense to me.
 
-docker-compose up -d --no-deps --build fast-ocean-droplet
+## Docker Compose
+
+On remote, git pull, then docker compose up -d
+
+## Context
+docker context create dev --docker "host=ssh://root@167.71.191.239"
+
+docker-compose --context dev up -d
