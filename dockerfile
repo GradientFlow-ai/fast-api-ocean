@@ -11,4 +11,4 @@ RUN git fetch
 
 EXPOSE 8000 
 
-CMD ["python", "api.py"]
+CMD ["python", "index.py"]
