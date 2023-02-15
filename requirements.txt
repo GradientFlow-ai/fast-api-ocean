@@ -2,5 +2,5 @@ fastapi
 uvicorn
 pytest
 httpx
-sklearn
+scikit-learn
 numpy

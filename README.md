@@ -53,6 +53,7 @@ docker exec -it <container_id> bash, will ssh into the container. But changes to
 
 ## Curl
  curl -H 'Content-Type: application/json' \
-      -d '{ "title":"foo","body":"bar", "id": 1}' \
+      -d '[[1.0, 2.0], [3.0, 4.0]]' \
       -X POST \
+      http://104.236.2.242:3000/tsne
       http://localhost:3000/tsne
