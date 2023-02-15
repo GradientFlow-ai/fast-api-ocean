@@ -19,6 +19,8 @@ This doesn't make any sense to me.
 
 On remote, git pull, then docker compose up -d
 
+But docker-compose up -d will rebuild and restart.
+
 ## Context
 I want to be able to restart the remote server easily and quickly.
 
@@ -56,3 +58,15 @@ May need sometime: https://registry.terraform.io/providers/integrations/github/l
 ## Github Actions
 
 Might try this at some point.
+
+## More Docker
+docker-compose up -d --build Will force build
+
+docker exec -it <container_id> bash, will ssh into the container. But changes to my own filesystem are not reflected.
+
+
+## Curl
+ curl -H 'Content-Type: application/json' \
+      -d '{ "title":"foo","body":"bar", "id": 1}' \
+      -X POST \
+      http://localhost:3000/tsne
