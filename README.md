@@ -1,6 +1,7 @@
 # Installation
 
-A very easy process, following [https://dev.to/ndrohith/deploy-a-containerised-fast-api-application-in-digital-ocean-25](this repo)
+## Initial setup
+A very easy process, following [this repo](https://dev.to/ndrohith/deploy-a-containerised-fast-api-application-in-digital-ocean-25)
 
 docker build -t fast-ocean-droplet .
 OR
@@ -44,6 +45,8 @@ ufw reload
 ## Github Actions
 
 Might try this at some point.
+
+I want to build on every update to main.
 
 ## More Docker
 docker-compose up -d --build Will force build

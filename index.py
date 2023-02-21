@@ -19,7 +19,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Hello from Fastapi, we are cooking now!"}
+    return {"message": "Hello from Fastapi, we are cooking now!!"}
 
 @app.post("/tsne")
 async def tsne(request: Request):
