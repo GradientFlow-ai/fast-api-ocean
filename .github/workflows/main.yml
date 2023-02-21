@@ -30,7 +30,7 @@ jobs:
         host: ${{ secrets.HOST_IP }}
         username: ${{ secrets.HOST_USERNAME }}
         key: ${{ secrets.HOST_KEY }}
-        script: cd ~/root/fast-api-ocean && git pull 
+        script: cd ~/fast-api-ocean && git pull 
 
       # build docker container
     - name: Docker Build
@@ -39,7 +39,7 @@ jobs:
         host: ${{ secrets.HOST_IP }}
         username: ${{ secrets.HOST_USERNAME }}
         key: ${{ secrets.HOST_KEY }}
-        script: cd ~/root/fast-api-ocean && docker rm fast-api-ocean_visualizations_api -f && docker build --platform linux/amd64 --no-cache -t fast-api-ocean_visualizations_api .
+        script: cd ~/fast-api-ocean && docker rm fast-api-ocean_visualizations_api -f && docker build --platform linux/amd64 --no-cache -t fast-api-ocean_visualizations_api .
 
       # run docker container
     - name: Docker Build
@@ -48,4 +48,4 @@ jobs:
         host: ${{ secrets.HOST_IP }}
         username: ${{ secrets.HOST_USERNAME }}
         key: ${{ secrets.HOST_KEY }}
-        script: cd ~/root/fast-api-ocean && docker run --restart=always --publish 3000:8000 --name=fast-api-ocean_visualizations_api -d fast-api-ocean_visualizations_api
+        script: cd ~/fast-api-ocean && docker run --restart=always --publish 3000:8000 --name=fast-api-ocean_visualizations_api -d fast-api-ocean_visualizations_api
